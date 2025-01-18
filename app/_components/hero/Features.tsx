@@ -1,4 +1,8 @@
+"use client"
+
 import { FC } from "react";
+import {motion} from "framer-motion";
+import { Search, Users, TrendingUp } from "lucide-react";
 
 const Features: FC = () => {
     return (

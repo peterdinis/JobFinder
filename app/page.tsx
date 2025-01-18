@@ -2,6 +2,8 @@ import { NextPage } from "next";
 import Hero from "./_components/hero/Hero";
 import Stats from "./_components/hero/Stats";
 import Categories from "./_components/hero/Categories";
+import Features from "./_components/hero/Features";
+import CTA from "./_components/hero/CTA";
 
 const Homepage: NextPage = () => {
   return (
@@ -9,6 +11,8 @@ const Homepage: NextPage = () => {
       <Hero />
       <Stats />
       <Categories />
+      <Features />
+      <CTA />
     </div>
   )
 }
