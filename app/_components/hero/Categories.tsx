@@ -15,7 +15,7 @@ import type { FC } from "react";
 
 const Categories: FC = () => {
 	return (
-		<div className="py-24 bg-gray-50">
+		<div className="py-24 bg-gray-50 dark:bg-background">
 			<div className="container mx-auto px-6">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -23,10 +23,10 @@ const Categories: FC = () => {
 					viewport={{ once: true }}
 					className="text-center mb-16"
 				>
-					<h2 className="text-4xl font-bold text-gray-900 mb-4">
+					<h2 className="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">
 						Explore Job Categories
 					</h2>
-					<p className="text-xl text-gray-600">
+					<p className="text-xl text-gray-600 dark:text-sky-50">
 						Find opportunities in various industries
 					</p>
 				</motion.div>
@@ -48,7 +48,7 @@ const Categories: FC = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.1 * index }}
 							viewport={{ once: true }}
-							className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+							className="bg-white dark:bg-gray-300 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer"
 						>
 							<div className="flex items-center space-x-4">
 								<div className="p-3 bg-blue-50 rounded-lg text-blue-600">

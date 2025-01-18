@@ -7,7 +7,7 @@ import type { FC } from "react";
 const CTA: FC = () => {
 	return (
 		<>
-			<div className="bg-blue-600 py-20">
+			<div className="bg-blue-600 dark:bg-blue-950 py-20">
 				<div className="container mx-auto px-6 text-center">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const CTA: FC = () => {
 						</h2>
 						<p className="text-xl text-blue-100 mb-8">
 							Join thousands of professionals who have found their dream jobs
-							through JobHub
+							through JobFinder
 						</p>
 						<button className="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
 							Get Started Now
