@@ -55,7 +55,7 @@ const Hero: FC = () => {
 								(tag, index) => (
 									<span
 										key={index}
-										className="bg-blue-500/30 px-3 py-1 rounded-full text-sm"
+										className="bg-primary px-3 py-1 rounded-full text-sm"
 									>
 										{tag}
 									</span>
