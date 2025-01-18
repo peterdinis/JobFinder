@@ -6,6 +6,7 @@ import { Briefcase, Menu } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Link from "next/link"
+import { ModeToggle } from "./ModeToggle"
 
 const Navigation: FC = () => {
   const navLinks = [
@@ -41,6 +42,7 @@ const Navigation: FC = () => {
             </Link>
           ))}
           <Button>Sign In</Button>
+          <ModeToggle />
         </motion.div>
 
         {/* Mobile Navigation */}
@@ -64,6 +66,7 @@ const Navigation: FC = () => {
                   </Link>
                 ))}
                 <Button className="w-full">Sign In</Button>
+                <ModeToggle />
               </div>
             </SheetContent>
           </Sheet>
