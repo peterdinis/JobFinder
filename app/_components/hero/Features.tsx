@@ -7,7 +7,7 @@ import type { FC } from "react";
 const Features: FC = () => {
 	return (
 		<>
-			<div className="bg-white py-24">
+			<div className="bg-white dark:bg-background py-24">
 				<div className="container mx-auto px-6">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -16,10 +16,10 @@ const Features: FC = () => {
 						viewport={{ once: true }}
 						className="text-center mb-16"
 					>
-						<h2 className="text-4xl font-bold text-gray-900 mb-4">
-							Why Choose JobHub
+						<h2 className="text-4xl font-bold text-gray-900 dark:text-sky-50 mb-4">
+							Why Choose Finder
 						</h2>
-						<p className="text-xl text-gray-600">
+						<p className="text-xl text-gray-600 dark:text-sky-100">
 							We connect talented professionals with amazing opportunities
 						</p>
 					</motion.div>
@@ -51,7 +51,7 @@ const Features: FC = () => {
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.2 * index }}
 								viewport={{ once: true }}
-								className="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
+								className="text-center p-8 rounded-xl bg-gray-50 dark:bg-gray-300 hover:bg-gray-100 transition-colors"
 							>
 								<div className="flex justify-center mb-6">{feature.icon}</div>
 								<h3 className="text-xl font-bold text-gray-900 mb-4">

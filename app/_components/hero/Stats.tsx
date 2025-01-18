@@ -5,7 +5,7 @@ import type { FC } from "react";
 
 const Stats: FC = () => {
 	return (
-		<div className="py-16 bg-white">
+		<div className="py-16 bg-white dark:bg-background">
 			<div className="container mx-auto px-6">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ const Stats: FC = () => {
 							<div className="text-4xl font-bold text-blue-600 mb-2">
 								{stat.number}
 							</div>
-							<div className="text-gray-600">{stat.label}</div>
+							<div className="text-gray-600 dark:text-sky-50">{stat.label}</div>
 						</div>
 					))}
 				</motion.div>
