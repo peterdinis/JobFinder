@@ -23,7 +23,7 @@ const Navigation: FC = () => {
           className="flex items-center space-x-2"
         >
           <Briefcase className="h-8 w-8 text-primary" />
-          <span className="text-2xl font-bold text-foreground">JobHub</span>
+          <span className="text-2xl font-bold text-foreground">JobFinder</span>
         </motion.div>
 
         <motion.div 
