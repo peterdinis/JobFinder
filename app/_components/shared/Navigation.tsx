@@ -65,7 +65,9 @@ const Navigation: FC = () => {
 										{link.label}
 									</Link>
 								))}
-								<Button size={"lg"} className="w-full">Sign In</Button>
+								<Button size={"lg"} className="w-full">
+									Sign In
+								</Button>
 								<ModeToggle />
 							</div>
 						</SheetContent>
