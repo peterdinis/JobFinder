@@ -43,7 +43,7 @@ const Hero: FC = () => {
 							<input
 								type="text"
 								placeholder="Job title, keywords, or company"
-								className="w-full px-4 py-3 text-gray-700 dark:text-sky-50 focus:outline-none"
+								className="w-full px-4 py-3 text-gray-700 bg-transparent dark:text-sky-50 focus:outline-none"
 							/>
 							<button className="bg-blue-600 dark:bg-sky-500 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
 								Search Jobs
