@@ -56,7 +56,7 @@ const JobDashboardLayout: FC = () => {
                     <aside className={`fixed h-[calc(100vh-4rem)] bg-white dark:bg-stone-900 border-r border-gray-200 overflow-y-auto transition-all duration-300 ease-in-out ${sidebarWidth}`}>
                         <button
                             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-                            className="absolute -right-3 top-6 bg-white border dark:bg-stone-900 border-gray-200 rounded-full p-1 shadow-md hover:shadow-lg transition-shadow"
+                            className="absolute -right-0 top-6 bg-white border dark:bg-stone-900 border-gray-200 rounded-full p-1 shadow-md hover:shadow-lg transition-shadow"
                         >
                             {isSidebarCollapsed ? (
                                 <ChevronRight className="h-4 w-4 text-gray-600 dark:text-gray-100" />
