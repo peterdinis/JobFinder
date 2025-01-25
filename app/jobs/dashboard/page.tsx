@@ -1,11 +1,8 @@
+import JobDashboardLayout from "@/app/_components/jobs/dashboard/JobDashboardLayout";
 import { NextPage } from "next";
 
 const JobsDashboardPage: NextPage = () => {
-    return (
-        <>
-            Jobs Dashboard
-        </>
-    )
+    return <JobDashboardLayout />
 }
 
 export default JobsDashboardPage
