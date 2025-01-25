@@ -2,6 +2,15 @@
 
 import { FC, useState } from "react";
 import { Search, Briefcase, MapPin, DollarSign, Filter, Building2, Clock, Banknote, GraduationCap, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+  } from "@/components/ui/pagination"
 
 const jobs = [
     {
@@ -239,7 +248,7 @@ const JobDashboardLayout: FC = () => {
                                             Apply Now
                                         </button>
                                     </div>
-                                    <p className="mt-4 text-gray-600 line-clamp-2">{job.description}</p>
+                                    <p className="mt-4 text-gray-600 dark:text-sky-50 line-clamp-2">{job.description}</p>
                                     <div className="mt-4 flex flex-wrap gap-2">
                                         {job.tags.map(tag => (
                                             <span key={tag} className="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors cursor-pointer">
@@ -249,6 +258,24 @@ const JobDashboardLayout: FC = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                        <div className="mt-4">
+                        <Pagination>
+                            <PaginationContent>
+                                <PaginationItem>
+                                    <PaginationPrevious href="#" />
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href="#">1</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationEllipsis />
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationNext href="#" />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
                         </div>
                     </main>
                 </div>
