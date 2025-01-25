@@ -4,11 +4,78 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+// For development use sqlite for production switch to postgresql
+
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  firstName String
+  lastName  String
+  phone     String?
+  location  String?
+  resume    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  applications JobApplication[]
+  socialLinks SocialLink[] // Vzťah 1:N medzi používateľom a jeho sociálnymi odkazmi
+}
+
+model SocialLink {
+  id      String @id @default(uuid())
+  userId  String
+  platform String 
+  url     String   // URL na sociálnu sieť
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Company {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  location    String
+  industry    String?
+  website     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  jobs Job[]
+}
+
+model Job {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  location    String
+  salary      Int?
+  type        String
+  companyId   String
+  company     Company  @relation(fields: [companyId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  applications JobApplication[]
+}
+
+model JobApplication {
+  id        String   @id @default(uuid())
+  userId    String
+  jobId     String
+  status    String   @default("pending")
+  user      User     @relation(fields: [userId], references: [id])
+  job       Job      @relation(fields: [jobId], references: [id])
+  appliedAt DateTime @default(now())
 }
