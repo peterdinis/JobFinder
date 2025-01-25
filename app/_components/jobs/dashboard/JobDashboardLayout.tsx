@@ -1,6 +1,7 @@
 "use client"
 
 import { FC, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Search, MapPin, DollarSign, Building2, Clock, Banknote, GraduationCap, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
     Pagination,
@@ -10,8 +11,9 @@ import {
     PaginationLink,
     PaginationNext,
     PaginationPrevious,
-  } from "@/components/ui/pagination"
+} from "@/components/ui/pagination"
 import { jobs, jobTypes, experienceLevels, salaryRanges } from "./customData";
+import Link from "next/link";
 
 
 const JobDashboardLayout: FC = () => {
@@ -202,9 +204,9 @@ const JobDashboardLayout: FC = () => {
                                                 <span className="text-gray-500">{job.posted}</span>
                                             </div>
                                         </div>
-                                        <button className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md">
+                                        <Button size={"lg"}>
                                             Apply Now
-                                        </button>
+                                        </Button>
                                     </div>
                                     <p className="mt-4 text-gray-600 dark:text-sky-50 line-clamp-2">{job.description}</p>
                                     <div className="mt-4 flex flex-wrap gap-2">
@@ -214,26 +216,29 @@ const JobDashboardLayout: FC = () => {
                                             </span>
                                         ))}
                                     </div>
+                                    <Button size={"lg"} variant={"secondary"} className="mt-10">
+                                        <Link href="#">Job Detail</Link>
+                                    </Button>
                                 </div>
                             ))}
                         </div>
                         <div className="mt-4">
-                        <Pagination>
-                            <PaginationContent>
-                                <PaginationItem>
-                                    <PaginationPrevious href="#" />
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationLink href="#">1</PaginationLink>
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationEllipsis />
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationNext href="#" />
-                                </PaginationItem>
-                            </PaginationContent>
-                        </Pagination>
+                            <Pagination>
+                                <PaginationContent>
+                                    <PaginationItem>
+                                        <PaginationPrevious href="#" />
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href="#">1</PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationEllipsis />
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationNext href="#" />
+                                    </PaginationItem>
+                                </PaginationContent>
+                            </Pagination>
                         </div>
                     </main>
                 </div>
