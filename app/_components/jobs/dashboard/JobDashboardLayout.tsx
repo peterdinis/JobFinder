@@ -53,7 +53,6 @@ const JobDashboardLayout: FC = () => {
             <div className=" bg-gray-50 dark:bg-background">
 
                 <div className="pt-4 flex">
-                    {/* Sidebar */}
                     <aside className={`fixed h-[calc(100vh-4rem)] bg-white dark:bg-stone-900 border-r border-gray-200 overflow-y-auto transition-all duration-300 ease-in-out ${sidebarWidth}`}>
                         <button
                             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
@@ -75,7 +74,7 @@ const JobDashboardLayout: FC = () => {
                                 </h3>
                                 <div className="space-y-2">
                                     {jobTypes.map(type => (
-                                        <label key={type} className="flex items-center p-2 hover:bg-gray-50 rounded-md cursor-pointer transition-colors">
+                                        <label key={type} className="flex items-center p-2 hover:bg-stone-400 rounded-md cursor-pointer transition-colors">
                                             <input
                                                 type="radio"
                                                 name="jobType"
@@ -119,7 +118,7 @@ const JobDashboardLayout: FC = () => {
                                 </h3>
                                 <div className="space-y-2">
                                     {salaryRanges.map(range => (
-                                        <label key={range} className="flex items-center p-2 hover:bg-gray-50 rounded-md cursor-pointer transition-colors">
+                                        <label key={range} className="flex items-center p-2 hover:bg-stone-400 rounded-md cursor-pointer transition-colors">
                                             <input
                                                 type="checkbox"
                                                 checked={selectedSalaryRanges.includes(range)}
