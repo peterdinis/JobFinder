@@ -28,6 +28,18 @@ model User {
   updatedAt DateTime @updatedAt
 
   applications JobApplication[]
+  socialLinks SocialLink[] // Vzťah 1:N medzi používateľom a jeho sociálnymi odkazmi
+}
+
+model SocialLink {
+  id      String @id @default(uuid())
+  userId  String
+  platform String 
+  url     String   // URL na sociálnu sieť
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Company {
