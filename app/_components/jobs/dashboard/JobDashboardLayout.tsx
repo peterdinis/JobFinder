@@ -1,7 +1,7 @@
 "use client"
 
 import { FC, useState } from "react";
-import { Search, Briefcase, MapPin, DollarSign, Filter, Building2, Clock, Banknote, GraduationCap, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, MapPin, DollarSign, Building2, Clock, Banknote, GraduationCap, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
     Pagination,
     PaginationContent,
@@ -11,49 +11,8 @@ import {
     PaginationNext,
     PaginationPrevious,
   } from "@/components/ui/pagination"
+import { jobs, jobTypes, experienceLevels, salaryRanges } from "./customData";
 
-const jobs = [
-    {
-        id: 1,
-        title: "Senior Frontend Developer",
-        company: "TechCorp Inc.",
-        location: "San Francisco, CA",
-        salary: "$120k - $150k",
-        type: "Full-time",
-        experience: "5+ years",
-        posted: "2d ago",
-        description: "We're looking for an experienced Frontend Developer to join our team...",
-        tags: ["React", "TypeScript", "Tailwind"]
-    },
-    {
-        id: 2,
-        title: "Product Designer",
-        company: "Design Studios",
-        location: "Remote",
-        salary: "$90k - $120k",
-        type: "Full-time",
-        experience: "3+ years",
-        posted: "1d ago",
-        description: "Join our creative team as a Product Designer...",
-        tags: ["Figma", "UI/UX", "Design Systems"]
-    },
-    {
-        id: 3,
-        title: "Backend Engineer",
-        company: "DataFlow Systems",
-        location: "New York, NY",
-        salary: "$130k - $160k",
-        type: "Full-time",
-        experience: "4+ years",
-        posted: "5d ago",
-        description: "Looking for a Backend Engineer to scale our infrastructure...",
-        tags: ["Node.js", "PostgreSQL", "AWS"]
-    }
-];
-
-const experienceLevels = ["Entry Level", "1-3 years", "3-5 years", "5+ years"];
-const jobTypes = ["Full-time", "Part-time", "Contract", "Internship"];
-const salaryRanges = ["$0-$50k", "$50k-$100k", "$100k-$150k", "$150k+"];
 
 const JobDashboardLayout: FC = () => {
 
@@ -94,11 +53,10 @@ const JobDashboardLayout: FC = () => {
             <div className=" bg-gray-50 dark:bg-background">
 
                 <div className="pt-4 flex">
-                    {/* Sidebar */}
                     <aside className={`fixed h-[calc(100vh-4rem)] bg-white dark:bg-stone-900 border-r border-gray-200 overflow-y-auto transition-all duration-300 ease-in-out ${sidebarWidth}`}>
                         <button
                             onClick={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-                            className="absolute -right-3 top-6 bg-white border dark:bg-stone-900 border-gray-200 rounded-full p-1 shadow-md hover:shadow-lg transition-shadow"
+                            className="absolute -right-0 top-6 bg-white border dark:bg-stone-900 border-gray-200 rounded-full p-1 shadow-md hover:shadow-lg transition-shadow"
                         >
                             {isSidebarCollapsed ? (
                                 <ChevronRight className="h-4 w-4 text-gray-600 dark:text-gray-100" />
@@ -116,7 +74,7 @@ const JobDashboardLayout: FC = () => {
                                 </h3>
                                 <div className="space-y-2">
                                     {jobTypes.map(type => (
-                                        <label key={type} className="flex items-center p-2 hover:bg-gray-50 rounded-md cursor-pointer transition-colors">
+                                        <label key={type} className="flex items-center p-2 hover:bg-stone-400 rounded-md cursor-pointer transition-colors">
                                             <input
                                                 type="radio"
                                                 name="jobType"
@@ -160,7 +118,7 @@ const JobDashboardLayout: FC = () => {
                                 </h3>
                                 <div className="space-y-2">
                                     {salaryRanges.map(range => (
-                                        <label key={range} className="flex items-center p-2 hover:bg-gray-50 rounded-md cursor-pointer transition-colors">
+                                        <label key={range} className="flex items-center p-2 hover:bg-stone-400 rounded-md cursor-pointer transition-colors">
                                             <input
                                                 type="checkbox"
                                                 checked={selectedSalaryRanges.includes(range)}
