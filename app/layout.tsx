@@ -4,6 +4,7 @@ import Navigation from "./_components/shared/Navigation";
 import QueryProvider from "./_components/shared/providers/QueryProvider";
 import { ThemeProvider } from "./_components/shared/providers/theme-provider";
 import ScrollToTop from "./_components/shared/ScrollToTop";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
 	title: "Job Finder",
@@ -29,6 +30,7 @@ export default function RootLayout({
 						<Navigation />
 						{children}
 						<ScrollToTop />
+						<Toaster />
 					</QueryProvider>
 				</ThemeProvider>
 			</body>
