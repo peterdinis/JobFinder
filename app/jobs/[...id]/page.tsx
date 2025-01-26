@@ -1,8 +1,8 @@
 import DetailInfo from "@/app/_components/jobs/detail/DetailInfo";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 
 const JobDetailPage: NextPage = () => {
-    return <DetailInfo />
-}
+	return <DetailInfo />;
+};
 
-export default JobDetailPage
+export default JobDetailPage;

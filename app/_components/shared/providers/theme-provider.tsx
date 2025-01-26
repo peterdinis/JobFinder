@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import type * as React from "react";
 
 export function ThemeProvider({

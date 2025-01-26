@@ -10,8 +10,8 @@ import { ModeToggle } from "./ModeToggle";
 
 const Navigation: FC = () => {
 	const navLinks = [
-		{ href: "#", label: "Find Jobs" },
-		{ href: "#", label: "Companies" },
+		{ href: "/jobs/dashboard", label: "Find Jobs" },
+		{ href: "/companies", label: "Companies" },
 		{ href: "#", label: "Resources" },
 	];
 
