@@ -58,7 +58,7 @@ const stagger = {
 
 const DetailInfo: FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen ">
       <div className="max-w-4xl mx-auto p-6">
         {/* Back Button */}
         <motion.div 
@@ -88,8 +88,8 @@ const DetailInfo: FC = () => {
               {...fadeIn}
             >
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">{jobData.title}</h1>
-                <div className="flex items-center gap-2 text-gray-600 mb-4">
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-sky-50 mb-2">{jobData.title}</h1>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-sky-100 mb-4">
                   <Building2 className="h-4 w-4" />
                   <span className="font-medium">{jobData.company}</span>
                   <span>•</span>
@@ -139,8 +139,8 @@ const DetailInfo: FC = () => {
               {...fadeIn}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-2xl font-semibold mb-4 text-gray-900">Job Description</h2>
-              <div className="prose max-w-none text-gray-700 whitespace-pre-line leading-relaxed">
+              <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-sky-50">Job Description</h2>
+              <div className="prose max-w-none text-gray-700 dark:text-sky-100 whitespace-pre-line leading-relaxed">
                 {jobData.description}
               </div>
             </motion.div>
@@ -151,7 +151,7 @@ const DetailInfo: FC = () => {
               {...fadeIn}
               transition={{ delay: 0.3 }}
             >
-              <h2 className="text-2xl font-semibold mb-4 text-gray-900">Required Skills</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-sky-50">Required Skills</h2>
               <motion.div 
                 className="flex flex-wrap gap-2"
                 variants={stagger}
@@ -180,7 +180,7 @@ const DetailInfo: FC = () => {
               {...fadeIn}
               transition={{ delay: 0.4 }}
             >
-              <h2 className="text-2xl font-semibold mb-4 text-gray-900">Benefits</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-sky-50">Benefits</h2>
               <motion.ul 
                 className="grid grid-cols-1 md:grid-cols-2 gap-4"
                 variants={stagger}
@@ -191,7 +191,7 @@ const DetailInfo: FC = () => {
                   <motion.li 
                     key={benefit} 
                     variants={fadeIn}
-                    className="flex items-center gap-3 text-gray-700 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                    className="flex items-center gap-3 text-gray-700 dark:text-sky-100 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300"
                   >
                     <div className="h-2 w-2 bg-primary rounded-full" />
                     {benefit}
@@ -215,6 +215,7 @@ const DetailInfo: FC = () => {
               </Button>
             </motion.div>
           </Card>
+          
         </motion.div>
       </div>
     </div>
