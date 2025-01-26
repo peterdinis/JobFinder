@@ -1,10 +1,9 @@
 "use client"
 
 import { FC } from "react";
-import { animate, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button";
-import { SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Sheet } from "lucide-react";
+import { SheetTrigger, SheetContent, SheetHeader, SheetTitle, SheetDescription, Sheet } from "@/components/ui/sheet";
 
 const ApplyToJob: FC = () => {
     return (
