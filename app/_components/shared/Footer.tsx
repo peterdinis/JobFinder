@@ -25,7 +25,7 @@ const Footer: FC = () => {
 						<ul className="space-y-3">
 							<li>
 								<Link
-									href="#"
+									href="/jobs/dashboard"
 									className="hover:text-blue-400 transition-colors"
 								>
 									Browse Jobs
@@ -45,14 +45,6 @@ const Footer: FC = () => {
 									className="hover:text-blue-400 transition-colors"
 								>
 									Resume Builder
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#"
-									className="hover:text-blue-400 transition-colors"
-								>
-									Job Alerts
 								</Link>
 							</li>
 						</ul>
