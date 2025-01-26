@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 import Navigation from "./_components/shared/Navigation";
+import ScrollToTop from "./_components/shared/ScrollToTop";
 import QueryProvider from "./_components/shared/providers/QueryProvider";
 import { ThemeProvider } from "./_components/shared/providers/theme-provider";
-import ScrollToTop from "./_components/shared/ScrollToTop";
-import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
 	title: "Job Finder",
@@ -18,8 +18,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-			>
+			<body>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"

@@ -1,11 +1,8 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
+import CompaniesList from "../_components/companies/CompaniesList";
 
 const CompaniesListPage: NextPage = () => {
-    return (
-        <>
-            aaaaa
-        </>
-    )
-}
+	return <CompaniesList />
+};
 
-export default CompaniesListPage
+export default CompaniesListPage;
